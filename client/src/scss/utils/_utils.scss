@@ -47,12 +47,13 @@
 		padding: 1.5rem;
 		border: none;
 		background: $silver;
+		border-radius: 10px;
 		outline: none;
 		border-bottom: 2px solid transparent;
 		transition: all 0.5s;
 
 		&:focus {
-			border-bottom-color: green;
+			border-bottom-color: $green;
 		}
 	}
 }
@@ -67,9 +68,18 @@
 	font-size: 1.4rem;
 	border: none;
 	cursor: pointer;
+
+	&:hover{
+        background-color: $white;
+        color: $green;
+        border-color: $green;
+        border: 2px solid;
+        transition: all 0.7s;
+    }
 }
 .btn-default {
 	background: $green;
+	border-radius: 10px;
 }
 .btn-block {
 	width: 100%;
