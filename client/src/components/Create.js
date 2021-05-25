@@ -10,7 +10,7 @@ const Create = (props) => {
 	const { createErrors, redirect, loading } = useSelector(
 		(state) => state.PostReducer
 	);
-	const [currentImage, setCurrentImage] = useState('Choose image');
+	const [currentImage, setCurrentImage] = useState('');
 	const [imagePreview, setImagePreview] = useState('');
 	const dispatch = useDispatch();
 	const {
@@ -137,7 +137,7 @@ const Create = (props) => {
 									</div> */}
 									<div className="group">
 										{currentImage &&
-											<label htmlFor="image" className="image__label">Choosing Image : {currentImage}</label>
+											<label htmlFor="image" className="image__label">Choosing Image : currentImage</label>
                                         }
 										{!currentImage &&
 											<label htmlFor="image" className="image__label">Choose Image</label>
@@ -176,7 +176,7 @@ const Create = (props) => {
 											</textarea>
 										<div className="row">
 											<p className="length">{state.description ? state.description.length : ''}</p>
-											<p>{state.description ? "/max-length: 150"  : ''}</p>
+											<p style={{marginTop: '10px'}}>{state.description ? "/max-length: 150"  : ''}</p>
 										</div>
 									</div>
 									    
