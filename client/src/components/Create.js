@@ -118,10 +118,12 @@ const Create = (props) => {
 											placeholder='Post title...'
 										/>
 									</div>
-									<div className='group'>
+									{/* <div className='group'>
 										<label htmlFor='image' className='image__label'>
 										{currentImage ?
-											<label htmlFor="image" className="image__label">Choosing Image : {currentImage}</label>
+											<label htmlFor="image" className="image__label">
+												Choosing Image : {currentImage}
+											</label>
 											:
 											<label htmlFor="image" className="image__label">Choose Image</label>
 										}
@@ -130,6 +132,21 @@ const Create = (props) => {
 											type='file'
 											name='image'
 											id='image'
+											onChange={fileHandle}
+										/>
+									</div> */}
+									<div className="group">
+										{currentImage ?
+											<label htmlFor="image" className="image__label">Choosing Image : {currentImage}</label>
+											:
+											<label htmlFor="image" className="image__label">Choose Image</label>
+										}
+
+										<input
+											type="file"
+											name="image"
+											id="image"
+											placeholder="Post title ..."
 											onChange={fileHandle}
 										/>
 									</div>
@@ -143,7 +160,7 @@ const Create = (props) => {
 											onChange={setValue}
 										/>
 									</div>
-									<div className='group'>
+									{/* <div className='group'>
 										<label htmlFor='description'>Meta Description</label>
 										<textarea
 											name='description'
@@ -154,15 +171,34 @@ const Create = (props) => {
 											onChange={handleDescription}
 											className='group__control'
 											placeholder='meta description...'
-											maxLength='150'></textarea>
-										{/* <p className='length'>
-											{state.description ? state.description.length : 0}
-										</p> */}
+											maxLength='150'>
+											</textarea>
 										<div className="row">
 											<p className="length">{state.description ? state.description.length : ''}</p>
 											<p>{state.description ? "/max-length: 150"  : ''}</p>
 										</div>
-									</div>
+									</div> */}
+									    <div className="group">
+                            <label htmlFor="description">Meta Description</label>
+                            <textarea
+                                name="description"
+                                id="description"
+                                cols="30"
+                                rows="10"
+                                className="group__control"
+                                placeholder="meta description..."
+                                maxLength="150"
+                                defaultValue={state.description}
+                                onChange={handleDescription}
+                                onKeyUp={(e) =>
+                                    setState({ ...state, description: e.target.value })
+                                }
+                            />
+                            <div className="row">
+                                <p className="length">{state.description ? state.description.length : ''}</p>
+                                <p>{state.description ? "/max-length: 150"  : ''}</p>
+                            </div>
+                        </div>
 								</div>
 							</div>
 							<div className='col-6 p-15'>
