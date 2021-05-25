@@ -76,7 +76,7 @@ const Login = () => {
 									<input
 										type='submit'
 										className='btn btn-default btn-block'
-										value={loading ? '...' : 'Login'}
+										value={loading ? 'Loading...' : 'Login'}
 									/>
 								</div>
 							</form>

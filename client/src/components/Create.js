@@ -120,7 +120,11 @@ const Create = (props) => {
 									</div>
 									<div className='group'>
 										<label htmlFor='image' className='image__label'>
-											{currentImage}
+										{currentImage ?
+											<label htmlFor="image" className="image__label">Choosing Image : {currentImage}</label>
+											:
+											<label htmlFor="image" className="image__label">Choose Image</label>
+										}
 										</label>
 										<input
 											type='file'
@@ -151,9 +155,13 @@ const Create = (props) => {
 											className='group__control'
 											placeholder='meta description...'
 											maxLength='150'></textarea>
-										<p className='length'>
+										{/* <p className='length'>
 											{state.description ? state.description.length : 0}
-										</p>
+										</p> */}
+										<div className="row">
+											<p className="length">{state.description ? state.description.length : ''}</p>
+											<p>{state.description ? "/max-length: 150"  : ''}</p>
+										</div>
 									</div>
 								</div>
 							</div>

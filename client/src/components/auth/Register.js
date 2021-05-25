@@ -91,7 +91,7 @@ const Register = (props) => {
 									<input
 										type='submit'
 										className='btn btn-default btn-block'
-										value={loading ? '...' : 'Register'}
+										value={loading ? 'Loading...' : 'Register'}
 									/>
 								</div>
 							</form>
