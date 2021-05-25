@@ -97,6 +97,9 @@ const Navbar = () => {
 	const Links = user ? (
 		<div className='navbar__right'>
 			<li>
+				<Link to='/'>Home</Link>
+			</li>
+			<li>
 				<Link to='/create'>Create Post</Link>
 			</li>
 			<li>
@@ -166,7 +169,7 @@ const Navbar = () => {
 						
 				{user ?
 				<>
-				<Link to='/dashboard/1'><h2>{user.name}</h2></Link>
+				<Link to='/dashboard/1'><h2 style={{marginRight:"15px"}}>{user.name}</h2></Link>
 				<IconButton
 					color="inherit"
 					aria-label="open drawer"
