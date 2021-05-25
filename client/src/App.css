@@ -1,0 +1,24 @@
+@media screen and (max-width: 800px) {
+    .responsiveNavbarDesktop{
+      display: none;
+    }
+}
+  
+  
+  
+@media screen and (min-width: 801px) {
+    .responsiveNavbarMobile{
+      display: none;
+    }
+}
+  
+
+
+  
+.MuiAppBar-colorPrimary {
+    background-color: white !important;
+    color: black !important; 
+}
+
+
+  
