@@ -10,7 +10,7 @@ const Create = (props) => {
 	const { createErrors, redirect, loading } = useSelector(
 		(state) => state.PostReducer
 	);
-	const [currentImage, setCurrentImage] = useState('Choose image');
+	const [currentImage, setCurrentImage] = useState('');
 	const [imagePreview, setImagePreview] = useState('');
 	const dispatch = useDispatch();
 	const {
@@ -118,14 +118,19 @@ const Create = (props) => {
 											placeholder='Post title...'
 										/>
 									</div>
-									<div className='group'>
-										<label htmlFor='image' className='image__label'>
-											{currentImage}
-										</label>
+									<div className="group">
+										{currentImage &&
+											<label htmlFor="image" className="image__label">Choosing Image : {currentImage}</label>
+                                        }
+										{!currentImage &&
+											<label htmlFor="image" className="image__label">Choose Image</label>
+										}
+
 										<input
-											type='file'
-											name='image'
-											id='image'
+											type="file"
+											name="image"
+											id="image"
+											placeholder="Post title ..."
 											onChange={fileHandle}
 										/>
 									</div>
@@ -150,13 +155,16 @@ const Create = (props) => {
 											onChange={handleDescription}
 											className='group__control'
 											placeholder='meta description...'
-											maxLength='150'></textarea>
-										<p className='length'>
-											{state.description ? state.description.length : 0}
-										</p>
+											maxLength='150'>
+											</textarea>
+										<div className="row">
+											<p className="length">{state.description ? state.description.length : ''}</p>
+											<p style={{marginTop: '10px'}}>{state.description ? "/max-length: 150"  : ''}</p>
+										</div>
 									</div>
-								</div>
-							</div>
+									    
+                         </div>  
+                        </div>
 							<div className='col-6 p-15'>
 								<div className='card'>
 									<div className='group'>
