@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import BgImage from './BgImage';
+import BgImage from './BgImageLogin';
 import { Helmet } from 'react-helmet';
 import { useSelector, useDispatch } from 'react-redux';
 import toast, { Toaster } from 'react-hot-toast';
