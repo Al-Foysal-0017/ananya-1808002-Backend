@@ -169,7 +169,7 @@ const Navbar = () => {
 						
 				{user ?
 				<>
-				<Link to='/dashboard/1'><h2 style={{marginRight:"15px"}}>{user.name}</h2></Link>
+				<Link to='/dashboard/1'><h2 style={{marginRight:"15px!important"}}>{user.name}</h2></Link>
 				<IconButton
 					color="inherit"
 					aria-label="open drawer"
