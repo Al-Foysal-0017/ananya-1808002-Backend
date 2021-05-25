@@ -79,7 +79,10 @@ const Dashboard = () => {
 					},
 				}}
 			/>
-			<div className='container mt-100'>
+			<div className="container">
+				<h1 style={{marginTop: "100px"}}>My Blog</h1>
+			</div>
+			<div className='container'>
 				<div className='row ml-minus-15 mr-minus-15'>
 					<div className='col-3 p-15'>
 						<Sidebar />
@@ -108,7 +111,9 @@ const Dashboard = () => {
 									</div>
 								))
 							) : (
-								'You dont have any post'
+								<h1 style={{ borderRadius:"10px", padding:"20px", backgroundColor:"white",color: '#2ECC71', display:"block"}}>
+									You don't have any post
+								</h1>
 							)
 						) : (
 							<Loader />

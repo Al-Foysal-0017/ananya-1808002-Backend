@@ -28,8 +28,11 @@ const Home = () => {
 					content='Learn HTML, CSS, JavaScript, React, Vue, Flutter etc'
 				/>
 			</Helmet>
+			<div className="container">
+				<h1 style={{marginTop: "100px"}}>All Public Blog</h1>
+			</div>
 			<div className='container'>
-				<div className='row mt-100' style={{ marginBottom: '30px' }}>
+				<div className='row' style={{ marginBottom: '30px' }}>
 					<div className='col-9 home'>
 						{!loading ? (
 							posts.length > 0 ? (
@@ -68,7 +71,9 @@ const Home = () => {
 									</div>
 								))
 							) : (
-								'No posts'
+								<h1 style={{ borderRadius:"10px", padding:"20px", backgroundColor:"white",color: '#2ECC71', display:"block"}}>
+									There are no posts.
+								</h1>
 							)
 						) : (
 							<Loader />
