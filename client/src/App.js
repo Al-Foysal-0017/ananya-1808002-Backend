@@ -16,6 +16,7 @@ import UpdateName from './components/UpdateName';
 import Store from './store';
 import ChangePassword from './components/ChangePassword';
 import Details from './components/Details';
+import "./App.css"
 function App() {
 	return (
 		<Provider store={Store}>

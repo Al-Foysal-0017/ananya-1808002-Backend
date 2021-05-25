@@ -211,14 +211,15 @@ const Navbar = () => {
 					<ListItemText><Link to='/'><h2>Home</h2></Link></ListItemText>
 					</ListItem>
 
-					<ListItem>
-					<ListItemIcon><ContactsIcon fontSize="large"/></ListItemIcon>
-					<ListItemText><Link to='/dashboard/1'><h2>My Blog</h2></Link></ListItemText>
-					</ListItem>
 
 					<ListItem>
 					<ListItemIcon><NoteAddIcon fontSize="large"/></ListItemIcon>
 					<ListItemText><Link to='/create'><h2>Create Post</h2></Link></ListItemText>
+					</ListItem>
+
+					<ListItem>
+					<ListItemIcon><ContactsIcon fontSize="large"/></ListItemIcon>
+					<ListItemText><Link to='/dashboard/1'><h2>My Blog</h2></Link></ListItemText>
 					</ListItem>
 				</List>
 

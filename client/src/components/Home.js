@@ -29,7 +29,7 @@ const Home = () => {
 				/>
 			</Helmet>
 			<div className="container">
-				<h1 style={{marginTop: "100px"}}>All Public Blog</h1>
+				<h1 style={{marginTop: "100px", marginBottom: "15px"}}>All Public Blog</h1>
 			</div>
 			<div className='container'>
 				<div className='row' style={{ marginBottom: '30px' }}>
