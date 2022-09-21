@@ -35,7 +35,6 @@ module.exports.getAllTransports = async (req, res) => {
   try {
     const count = await Transport.find({}).countDocuments();
     const transport = await Transport.find({});
-    // .sort({ updatedAt: -1 });
     return res.status(200).json({ response: transport, count });
   } catch (error) {
     return res.status(500).json({ errors: error, msg: error.message });

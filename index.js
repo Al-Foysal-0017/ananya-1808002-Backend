@@ -5,7 +5,6 @@ const path = require("path");
 const router = require("./routes/userRoutes");
 const placeRoutes = require("./routes/placeRoutes");
 const transportRoutes = require("./routes/transportRoutes");
-const profileRoutes = require("./routes/profileRoutes");
 require("dotenv").config();
 const app = express();
 const cors = require("cors");
@@ -18,7 +17,6 @@ app.use(bodyParser.json());
 app.use("/", router);
 app.use("/", placeRoutes);
 app.use("/", transportRoutes);
-app.use("/", profileRoutes);
 const PORT = process.env.PORT || 5500;
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/client/build/")));
